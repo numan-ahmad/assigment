@@ -1,0 +1,42 @@
+import { Amount } from './amount';
+import { ApplicationInfo } from './applicationInfo';
+import { LineItem } from './lineItem';
+import { PlatformChargebackLogic } from './platformChargebackLogic';
+import { Split } from './split';
+import { SubMerchantInfo } from './subMerchantInfo';
+export declare class PaymentCaptureRequest {
+    'amount': Amount;
+    'applicationInfo'?: ApplicationInfo;
+    /**
+    * Price and product information of the refunded items, required for [partial refunds](https://docs.adyen.com/online-payments/refund#refund-a-payment). > This field is required for partial refunds with 3x 4x Oney, Affirm, Afterpay, Atome, Clearpay, Klarna, Ratepay, Walley, and Zip.
+    */
+    'lineItems'?: Array<LineItem>;
+    /**
+    * The merchant account that is used to process the payment.
+    */
+    'merchantAccount': string;
+    'platformChargebackLogic'?: PlatformChargebackLogic;
+    /**
+    * Your reference for the capture request. Maximum length: 80 characters.
+    */
+    'reference'?: string;
+    /**
+    * An array of objects specifying how the amount should be split between accounts when using Adyen for Platforms. For more information, see how to process payments for [marketplaces](https://docs.adyen.com/marketplaces/split-payments) or [platforms](https://docs.adyen.com/platforms/online-payments/split-payments/).
+    */
+    'splits'?: Array<Split>;
+    /**
+    * A List of sub-merchants.
+    */
+    'subMerchants'?: Array<SubMerchantInfo>;
+    static discriminator: string | undefined;
+    static attributeTypeMap: Array<{
+        name: string;
+        baseName: string;
+        type: string;
+    }>;
+    static getAttributeTypeMap(): {
+        name: string;
+        baseName: string;
+        type: string;
+    }[];
+}

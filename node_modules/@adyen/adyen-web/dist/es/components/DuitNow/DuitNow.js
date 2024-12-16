@@ -1,0 +1,2 @@
+import r from"../helpers/QRLoaderContainer/QRLoaderContainer.js";import{delay as e,countdownTime as o}from"./config.js";import{TxVariants as t}from"../tx-variants.js";class a extends r{formatProps(r){return{delay:e,countdownTime:o,...super.formatProps(r)}}}var n,i,s;n=a,i="type",s=t.duitnow,i in n?Object.defineProperty(n,i,{value:s,enumerable:!0,configurable:!0,writable:!0}):n[i]=s;export{a as default};
+//# sourceMappingURL=DuitNow.js.map

@@ -1,0 +1,1 @@
+{"version":3,"file":"config.js","sources":["../../../../src/components/ApplePay/config.ts"],"sourcesContent":["export const APPLEPAY_SESSION_ENDPOINT = 'v1/applePay/sessions';\n"],"names":["APPLEPAY_SESSION_ENDPOINT"],"mappings":"AAAO,MAAMA,EAA4B"}

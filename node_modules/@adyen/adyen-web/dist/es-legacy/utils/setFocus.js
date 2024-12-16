@@ -1,0 +1,2 @@
+import{selectOne as e}from"../components/internal/SecuredFields/lib/utilities/dom.js";const s=(s,t)=>{const i=e(document,s),n="issuer"===t?"issuer-list":t;if("country"===n||"stateOrProvince"===n||"issuer-list"===n){const s=e(i,`.adyen-checkout__field--${n} .adyen-checkout__filter-input`);null==s||s.focus()}else{const s=e(i,`[name="${n}"]`);null==s||s.focus()}};export{s as setFocusOnField};
+//# sourceMappingURL=setFocus.js.map
